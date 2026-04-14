@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наша Группа | Проекты</title>
+    <style>
+        /* Базовые стили */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(180deg, #1f1f1f 0%, #121212 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+
+        /* Секция ФОТО */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            background-color: #333; /* Заглушка пока фото грузится */
+        }
+
+        .photo-card img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Секция ВИДЕО (Скролл-лента) */
+        .video-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 20px;
+            scrollbar-width: thin;
+            scrollbar-color: #007bff #1f1f1f;
+        }
+
+        .video-card {
+            min-width: 300px;
+            background: #1f1f1f;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .video-card video {
+            width: 100%;
+            display: block;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        /* Для красивого скроллбара в Chrome/Safari */
+        .video-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .video-scroll-container::-webkit-scrollbar-thumb {
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Творчество Нашей Группы</h1>
+        <p>Фотографии и видео наших последних работ</p>
+    </header>
+
+    <div class="container">
+        
+        <h2>Наша Команда</h2>
+        <div class="photo-grid">
+            
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300" alt="Фото 1">
+            </div>
+
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300" alt="Фото 2">
+            </div>
+
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300" alt="Фото 3">
+            </div>
+
+        </div>
+
+        <hr>
+
+        <h2>Наши Видео</h2>
+        <div class="video-scroll-container">
+
+            <div class="video-card">
+                <video controls>
+                    <source src="ССЫЛКА_НА_ВИДЕО_1.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+                <div class="video-info">
+                    <h4>Название видео 1</h4>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <video controls>
+                    <source src="ССЫЛКА_НА_ВИДЕО_2.mp4" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <h4>Название видео 2</h4>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <video controls>
+                    <source src="ССЫЛКА_НА_ВИДЕО_3.mp4" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <h4>Название видео 3</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; color: #555;">
+        &copy; 2026 Создано нашей группой |PoFactu все права защищены. 
+    </footer>
+
+</body>
+</html>
