@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -210,6 +211,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -610,161 +612,164 @@
         }
     </style>
 </head>
+
 <body>
 
-    <!-- ===== ПРИВЕТСТВИЕ ===== -->
+    <!-- ===== WELCOME ===== -->
     <div id="intro">
-        <h1>Наша Группа</h1>
-        <p>Наши лучшие моменты</p>
+        <h1>Our Group</h1>
+        <p>Our best moments</p>
     </div>
 
-    <!-- ===== НАВИГАЦИЯ ===== -->
+    <!-- ===== NAVIGATION ===== -->
     <nav id="navbar">
-        <a href="#" class="nav-logo"><span>●</span> Группа</a>
+        <a href="#" class="nav-logo"><span>●</span> Group</a>
         <div class="nav-links">
-            <a href="#videos">Видео</a>
-            <a href="#photos">Фото</a>
-            <!-- ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ -->
-            <button class="theme-toggle" id="theme-toggle" title="Переключить тему">
-                <!-- Луна (светлая тема) -->
+            <!-- THEME TOGGLE -->
+            <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+                <!-- Light theme (moon) -->
                 <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                    <path
+                        d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
                 </svg>
-                <!-- Солнце (тёмная тема) -->
+                <!-- Dark theme (sun) -->
                 <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                    <path
+                        d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
                 </svg>
             </button>
-            <!-- АВАТАР ПОЛЬЗОВАТЕЛЯ -->
-            <div class="nav-avatar" title="Профиль">
+            <!-- USER AVATAR -->
+            <div class="nav-avatar" title="Profile">
                 <!-- 
-                    Чтобы поставить своё фото:
-                    Замени <span class="nav-avatar-placeholder">Я</span> на:
-                    <img src="URL_ИЛИ_ФАЙЛ.jpg" alt="Аватар">
+                    To set your own photo:
+                    Replace <span class="nav-avatar-placeholder">Me</span> with:
+                    <img src="URL_OR_FILE.jpg" alt="Avatar">
                 -->
-                <span class="nav-avatar-placeholder">Я</span>
+                <span class="nav-avatar-placeholder">Me</span>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- ===== ВКЛАДКИ ===== -->
-        <section>
-            <div class="tabs">
-                <button class="tab active" data-tab="videos">Видео</button>
-                <button class="tab" data-tab="photos">Фото</button>
-                <button class="tab" data-tab="about">О нас</button>
+        <!-- ===== TABS ===== -->
+        <section id="main-section">
+            <div class="tabs" id="tabs-container">
+                <button class="tab active" data-tab="videos">Videos</button>
+                <button class="tab" data-tab="photos">Photos</button>
+                <button class="tab" data-tab="about">About Us</button>
             </div>
 
-            <!-- ===== ВИДЕО ===== -->
+            <!-- ===== VIDEOS ===== -->
             <div class="tab-content active" id="videos">
-                <h2>Наши Видео</h2>
+                <h2>Our Videos</h2>
                 <div class="video-grid" id="video-grid">
-                    <!-- Видео добавляются через JS массив VIDEO_URLS -->
+                    <!-- Videos are added via JS array VIDEO_URLS -->
                 </div>
             </div>
 
-            <!-- ===== ФОТО ===== -->
+            <!-- ===== PHOTOS ===== -->
             <div class="tab-content" id="photos">
-                <h2>Фото Нашей Группы</h2>
+                <h2>Photos of Our Group</h2>
                 <div class="photo-grid">
 
-                    <!-- ФОТО 1 -->
+                    <!-- PHOTO 1 -->
                     <div class="photo-card">
-                        <img src="" alt="Фото 1">
-                        <div class="photo-overlay">Описание фото 1</div>
+                        <img src="https://ibb.co/3g4ZNCV" alt="Photo 1">
+                        <div class="photo-overlay">Photo 1 description</div>
                     </div>
 
-                    <!-- ФОТО 2 -->
+                    <!-- PHOTO 2 -->
                     <div class="photo-card">
-                        <img src="" alt="Фото 2">
-                        <div class="photo-overlay">Описание фото 2</div>
+                        <img src="" alt="Photo 2">
+                        <div class="photo-overlay">Photo 2 description</div>
                     </div>
 
-                    <!-- ФОТО 3 -->
+                    <!-- PHOTO 3 -->
                     <div class="photo-card">
-                        <img src="" alt="Фото 3">
-                        <div class="photo-overlay">Описание фото 3</div>
+                        <img src="" alt="Photo 3">
+                        <div class="photo-overlay">Photo 3 description</div>
                     </div>
 
-                    <!-- ФОТО 4 -->
+                    <!-- PHOTO 4 -->
                     <div class="photo-card">
-                        <img src="" alt="Фото 4">
-                        <div class="photo-overlay">Описание фото 4</div>
+                        <img src="" alt="Photo 4">
+                        <div class="photo-overlay">Photo 4 description</div>
                     </div>
 
-                    <!-- ФОТО 5 -->
+                    <!-- PHOTO 5 -->
                     <div class="photo-card">
-                        <img src="" alt="Фото 5">
-                        <div class="photo-overlay">Описание фото 5</div>
+                        <img src="" alt="Photo 5">
+                        <div class="photo-overlay">Photo 5 description</div>
                     </div>
 
-                    <!-- ФОТО 6 -->
+                    <!-- PHOTO 6 -->
                     <div class="photo-card">
-                        <img src="" alt="Фото 6">
-                        <div class="photo-overlay">Описание фото 6</div>
+                        <img src="" alt="Photo 6">
+                        <div class="photo-overlay">Photo 6 description</div>
                     </div>
 
-                    <!-- ФОТО 7 -->
+                    <!-- PHOTO 7 -->
                     <div class="photo-card">
-                        <img src="" alt="Фото 7">
-                        <div class="photo-overlay">Описание фото 7</div>
+                        <img src="" alt="Photo 7">
+                        <div class="photo-overlay">Photo 7 description</div>
                     </div>
 
-                    <!-- ФОТО 8 -->
+                    <!-- PHOTO 8 -->
                     <div class="photo-card">
-                        <img src="" alt="Фото 8">
-                        <div class="photo-overlay">Описание фото 8</div>
+                        <img src="" alt="Photo 8">
+                        <div class="photo-overlay">Photo 8 description</div>
                     </div>
 
-                    <!-- ЗАГРУЗКА С КОМПЬЮТЕРА -->
+                    <!-- UPLOAD FROM COMPUTER -->
                     <label class="upload-area" for="photo-upload">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/>
+                            <path
+                                d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z" />
                         </svg>
-                        <p>Загрузить фото</p>
+                        <p>Upload photo</p>
                         <input type="file" id="photo-upload" accept="image/*" multiple>
                     </label>
 
-                    <!-- ДОБАВЬ НОВОЕ ФОТО СЮДА -->
+                    <!-- ADD NEW PHOTO HERE -->
 
                 </div>
             </div>
 
-            <!-- ===== О НАС ===== -->
+            <!-- ===== ABOUT US ===== -->
             <div class="tab-content" id="about">
-                <h2>О Нас</h2>
+                <h2>About Us</h2>
                 <div class="about-grid" id="about-grid">
-                    <!-- Данные загружаются через JS массив TEAM_MEMBERS -->
+                    <!-- Data loaded via JS array TEAM_MEMBERS -->
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Наша Группа</p>
+        <p>&copy; 2026 Our Group</p>
     </footer>
 
     <script>
         // ╔══════════════════════════════════════════════════════════╗
-        // ║          ВСТАВЛЯЙ URL ВИДЕО СЮДА                        ║
+        // ║          INSERT VIDEO URLS HERE                         ║
         // ╚══════════════════════════════════════════════════════════╝
         //
-        // Формат: { url: "ссылка", title: "название" }
+        // Format: { url: "link", title: "title" }
         //
-        // Поддерживаются:
-        //  1. Прямые ссылки на .mp4 / .webm
-        //  2. YouTube — обычная ссылка или embed
-        //  3. Vimeo и другие платформы
+        // Supported:
+        //  1. Direct links to .mp4 / .webm
+        //  2. YouTube — normal link or embed
+        //  3. Vimeo and other platforms
         //
         const VIDEO_URLS = [
-            { url: "https://youtu.be/VEu4-7N1Qvk?si=RTGrrB6VdHS2eBUL", title: "Наше первое видео" },
+            { url: "https://youtu.be/VEu4-7N1Qvk?si=RTGrrB6VdHS2eBUL", title: "Our first video" },
             { url: "https://youtu.be/yEI4RkNEsRM?si=2nr28ffPupMZcA0R", title: "from coin to NFC" },
-            // { url: "https://www.youtube.com/watch?v=XXXXXXXX", title: "YouTube видео" },
-            // Добавляй новые строки сюда через запятую
+            { url: "https://youtu.be/d1frUpTzgZs?si=JmMHr03AGtVXXiG-", title: "tested" },
+            // { url: "https://www.youtube.com/watch?v=XXXXXXXX", title: "YouTube video" },
+            // Add new lines here separated by commas
         ];
 
-        // Определяет тип видео по URL
+        // Determines video type by URL
         function getVideoType(url) {
             if (url.includes('youtube.com') || url.includes('youtu.be')) return 'youtube';
             if (url.includes('vimeo.com')) return 'vimeo';
@@ -772,7 +777,7 @@
             return 'direct';
         }
 
-        // Получает embed URL из обычной ссылки YouTube
+        // Gets embed URL from a regular YouTube link
         function getEmbedUrl(url) {
             // YouTube
             const ytMatch = url.match(/[?&]v=([a-zA-Z0-9_-]+)/);
@@ -817,61 +822,94 @@
                 grid.appendChild(card);
             });
 
-            // Анимация появления
+            // Appearance animation
             observeCards();
         }
 
         // ╔══════════════════════════════════════════════════════════╗
-        // ║          ВСТАВЛЯЙ URL ФОТО СЮДА                         ║
+        // ║          INSERT PHOTO URLS HERE                         ║
         // ╚══════════════════════════════════════════════════════════╝
         //
-        // Формат: { url: "ссылка", alt: "описание" }
+        // Format: { url: "link", alt: "description" }
         //
         const PHOTO_URLS = [
-            // { url: "https://example.com/photo1.jpg", alt: "Наше фото" },
-            // { url: "photo.jpg", alt: "Локальное фото" },
-            // Добавляй новые строки сюда через запятую
+            // { url: "https://example.com/photo1.jpg", alt: "Our photo" },
+            // { url: "photo.jpg", alt: "Local photo" },
+            // Add new lines here separated by commas
         ];
 
         // ╔══════════════════════════════════════════════════════════╗
-        // ║          ВСТАВЛЯЙ ДАННЫЕ УЧАСТНИКОВ СЮДА               ║
+        // ║          INSERT TEAM MEMBERS DATA HERE                 ║
         // ╚══════════════════════════════════════════════════════════╝
         //
-        // avatar — URL фото или null (тогда будет инициал)
-        // tasks — массив того, что человек делал
+        // avatar — photo URL or null (will use initial)
+        // tasks — array of what the person did
         //
         const TEAM_MEMBERS = [
             {
-                name: "Участник 1",
-                role: "Роль",
+                name: "Kamron",
+                role: "editor",
                 avatar: null,
                 tasks: [
-                    "Делал видос 1",
-                    "Монтировал видос 2",
+                    "edited all long videos",
+                    "ruled all of editing procecces",
                 ]
             },
             {
-                name: "Участник 2",
-                role: "Роль",
+                name: "Abduqodir",
+                role: "Role",
                 avatar: null,
                 tasks: [
-                    "Снимал видос 3",
-                    "Фоткал группу",
+                    "Shot video 3",
+                    "Took photos of the group",
                 ]
             },
-            // Копируй блок ниже и заполняй новых участников:
+            {
+                name: "Shohjahon",
+                role: "project manager",
+                avatar: null,
+                tasks: [
+                    "Shot video 3",
+                    "Took photos of the group",
+                ]
+            }, {
+                name: "Bunyod",
+                role: "presenter",
+                avatar: null,
+                tasks: [
+                    "Shot video 3",
+                    "Took photos of the group",
+                ]
+            }, {
+                name: "Member 2",
+                role: "Role",
+                avatar: null,
+                tasks: [
+                    "Shot video 3",
+                    "Took photos of the group",
+                ]
+            }, {
+                name: "Member 2",
+                role: "Role",
+                avatar: null,
+                tasks: [
+                    "Shot video 3",
+                    "Took photos of the group",
+                ]
+            },
+            // Copy the block below and fill in new members:
             // {
-            //     name: "Имя",
-            //     role: "Что делал",
-            //     avatar: "https://example.com/avatar.jpg",  // или null
+            //     name: "Name",
+            //     role: "What they did",
+            //     avatar: "https://example.com/avatar.jpg",  // or null
             //     tasks: [
-            //         "Задача 1",
-            //         "Задача 2",
+            //         "Task 1",
+            //         "Task 2",
             //     ]
             // },
         ];
 
-        // Рендерит фото-карточки из массива
+        // Renders photo cards from array
         function renderPhotos() {
             const grid = document.querySelector('#photos .photo-grid');
             const uploadArea = grid.querySelector('.upload-area');
@@ -886,11 +924,80 @@
                 grid.insertBefore(card, uploadArea);
             });
 
-            // Анимация появления
+            // Appearance animation
             observeCards();
         }
 
-        // ===== АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ =====
+        // Renders team members
+        function renderTeam() {
+            const grid = document.getElementById('about-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            TEAM_MEMBERS.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'member-card';
+
+                const initial = member.name ? member.name.charAt(0).toUpperCase() : '?';
+                const avatarHTML = member.avatar
+                    ? `<div class="member-avatar"><img src="${member.avatar}" alt="${member.name}"></div>`
+                    : `<div class="member-avatar">${initial}</div>`;
+
+                const tasksHTML = member.tasks.map(task => `<li>${task}</li>`).join('');
+
+                card.innerHTML = `
+                    <div class="member-header">
+                        ${avatarHTML}
+                        <div>
+                            <div class="member-name">${member.name}</div>
+                            <div class="member-role">${member.role}</div>
+                        </div>
+                    </div>
+                    <ul class="member-tasks">
+                        ${tasksHTML}
+                    </ul>
+                `;
+                grid.appendChild(card);
+            });
+
+            observeCards();
+        }
+
+        // ╔══════════════════════════════════════════════════════════╗
+        // ║          CUSTOM TABS SYSTEM                            ║
+        // ╚══════════════════════════════════════════════════════════╝
+        // You can easily add custom tabs here
+        const CUSTOM_TABS = [
+            // Example custom tab:
+            // {
+            //     id: "custom1",
+            //     title: "Extra Tab",
+            //     content: `<h2>Extra Content</h2><p>This is a custom tab generated via JS.</p>`
+            // }
+        ];
+
+        function renderCustomTabs() {
+            const tabsContainer = document.getElementById('tabs-container');
+            const mainSection = document.getElementById('main-section');
+
+            CUSTOM_TABS.forEach(tabData => {
+                // Add tab button
+                const btn = document.createElement('button');
+                btn.className = 'tab';
+                btn.dataset.tab = tabData.id;
+                btn.textContent = tabData.title;
+                tabsContainer.appendChild(btn);
+
+                // Add tab content
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'tab-content';
+                contentDiv.id = tabData.id;
+                contentDiv.innerHTML = tabData.content;
+                mainSection.appendChild(contentDiv);
+            });
+        }
+
+        // ===== APPEARANCE ANIMATION ON SCROLL =====
         function observeCards() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -901,7 +1008,7 @@
                 });
             }, { threshold: 0.1 });
 
-            document.querySelectorAll('.video-card, .photo-card').forEach(card => {
+            document.querySelectorAll('.video-card, .photo-card, .member-card').forEach(card => {
                 if (card.style.opacity === '') {
                     card.style.opacity = '0';
                     card.style.transform = 'translateY(20px)';
@@ -911,17 +1018,17 @@
             });
         }
 
-        // ===== ПРИВЕТСТВИЕ: исчезновение через 2.5 секунды =====
+        // ===== WELCOME: fade out after 2.5 seconds =====
         setTimeout(() => {
             document.getElementById('intro').classList.add('fade-out');
             document.getElementById('navbar').classList.add('visible');
         }, 2500);
 
-        // ===== ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ =====
+        // ===== THEME TOGGLE =====
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
 
-        // Проверяем сохранённую тему
+        // Check saved theme
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             body.classList.add('dark');
@@ -932,21 +1039,21 @@
             localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
         });
 
-        // ===== ВКЛАДКИ =====
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', function() {
+        // ===== TABS =====
+        document.getElementById('tabs-container').addEventListener('click', function (e) {
+            if (e.target.classList.contains('tab')) {
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                 document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
 
-                this.classList.add('active');
-                document.getElementById(this.dataset.tab).classList.add('active');
-            });
+                e.target.classList.add('active');
+                document.getElementById(e.target.dataset.tab).classList.add('active');
+            }
         });
 
-        // ===== ЗАГРУЗКА ЛОКАЛЬНЫХ ФОТО =====
+        // ===== UPLOAD LOCAL PHOTOS =====
         const photoUpload = document.getElementById('photo-upload');
         if (photoUpload) {
-            photoUpload.addEventListener('change', function(e) {
+            photoUpload.addEventListener('change', function (e) {
                 const files = e.target.files;
                 const photoGrid = document.querySelector('#photos .photo-grid');
                 const uploadArea = photoGrid.querySelector('.upload-area');
@@ -954,7 +1061,7 @@
                 Array.from(files).forEach(file => {
                     if (file.type.startsWith('image/')) {
                         const reader = new FileReader();
-                        reader.onload = function(event) {
+                        reader.onload = function (event) {
                             const photoCard = document.createElement('div');
                             photoCard.className = 'photo-card';
                             photoCard.innerHTML = `
@@ -971,10 +1078,13 @@
             });
         }
 
-        // Запуск рендера
+        // Start rendering
+        renderCustomTabs();
         renderVideos();
         renderPhotos();
+        renderTeam();
     </script>
 
 </body>
+
 </html>
