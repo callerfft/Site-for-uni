@@ -346,17 +346,41 @@
         }
 
         /* ===== ФОТО ===== */
+        .photo-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
         .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            display: flex;
             gap: 16px;
+            width: max-content;
+            animation: scroll-photos 20s linear infinite;
+        }
+
+        .photo-grid:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-photos {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 8px));
+            }
         }
 
         .photo-card {
             position: relative;
             border-radius: 16px;
             overflow: hidden;
-            aspect-ratio: 1 / 1;
+            width: 250px;
+            height: 250px;
+            flex-shrink: 0;
             cursor: pointer;
             background: #f5f5f5;
             transition: background 0.3s ease;
@@ -446,6 +470,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
+            align-items: start;
         }
 
         .member-card {
@@ -473,6 +498,36 @@
             align-items: center;
             gap: 16px;
             margin-bottom: 16px;
+        }
+
+        .member-short {
+            font-size: 0.95rem;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        body.dark .member-short {
+            color: #aaa;
+        }
+
+        .member-desc-full {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+            font-size: 0.9rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        body.dark .member-desc-full {
+            color: #bbb;
+        }
+
+        .member-card:hover .member-desc-full {
+            max-height: 300px;
+            opacity: 1;
+            margin-top: 16px;
         }
 
         .member-avatar {
@@ -670,69 +725,88 @@
             <!-- ===== PHOTOS ===== -->
             <div class="tab-content" id="photos">
                 <h2>Photos of Our Group</h2>
-                <div class="photo-grid">
+                <div class="photo-container">
+                    <div class="photo-grid">
+                        <!-- SET 1 -->
+                        <!-- PHOTO 1 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/Vcqhs5Nn/photo-19-2026-03-31-12-19-06.jpg" alt="Photo 1">
+                            <div class="photo-overlay">Sherzodjon</div>
+                        </div>
 
-                    <!-- PHOTO 1 -->
-                    <div class="photo-card">
-                        <img src="https://ibb.co/3g4ZNCV" alt="Photo 1">
-                        <div class="photo-overlay">Photo 1 description</div>
+                        <!-- PHOTO 2 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/SDyVghRG/photo-10-2026-04-03-13-25-07.jpg" alt="Photo 2">
+                            <div class="photo-overlay">Suhrobjon</div>
+                        </div>
+
+                        <!-- PHOTO 3 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/fYv4hmGd/photo-2-2026-03-31-13-55-54.jpg" alt="Photo 3">
+                            <div class="photo-overlay">Bunyodjon</div>
+                        </div>
+
+                        <!-- PHOTO 4 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/wZKXmPL1/photo-3-2026-03-31-13-53-05.jpg" alt="Photo 4">
+                            <div class="photo-overlay">Shohjahon</div>
+                        </div>
+
+                        <!-- PHOTO 5 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/27wKpk5r/photo-3-2026-03-31-12-19-06.jpg" alt="Photo 5">
+                            <div class="photo-overlay">Kamron</div>
+                        </div>
+
+                        <!-- PHOTO 6 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/VfJ4Sqb/IMG-6256.jpg" alt="Photo 6">
+                            <div class="photo-overlay">Abduqodir</div>
+                        </div>
+
+                        <!-- SET 2 FOR INFINITE LOOP -->
+                        <!-- PHOTO 1 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/Vcqhs5Nn/photo-19-2026-03-31-12-19-06.jpg" alt="Photo 1">
+                            <div class="photo-overlay">Sherzodjon</div>
+                        </div>
+
+                        <!-- PHOTO 2 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/SDyVghRG/photo-10-2026-04-03-13-25-07.jpg" alt="Photo 2">
+                            <div class="photo-overlay">Suhrobjon</div>
+                        </div>
+
+                        <!-- PHOTO 3 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/fYv4hmGd/photo-2-2026-03-31-13-55-54.jpg" alt="Photo 3">
+                            <div class="photo-overlay">Bunyodjon</div>
+                        </div>
+
+                        <!-- PHOTO 4 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/wZKXmPL1/photo-3-2026-03-31-13-53-05.jpg" alt="Photo 4">
+                            <div class="photo-overlay">Shohjahon</div>
+                        </div>
+
+                        <!-- PHOTO 5 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/27wKpk5r/photo-3-2026-03-31-12-19-06.jpg" alt="Photo 5">
+                            <div class="photo-overlay">Kamron</div>
+                        </div>
+
+                        <!-- PHOTO 6 -->
+                        <div class="photo-card">
+                            <img src="https://i.ibb.co/VfJ4Sqb/IMG-6256.jpg" alt="Photo 6">
+                            <div class="photo-overlay">Abduqodir</div>
+                        </div>
                     </div>
-
-                    <!-- PHOTO 2 -->
-                    <div class="photo-card">
-                        <img src="" alt="Photo 2">
-                        <div class="photo-overlay">Photo 2 description</div>
-                    </div>
-
-                    <!-- PHOTO 3 -->
-                    <div class="photo-card">
-                        <img src="" alt="Photo 3">
-                        <div class="photo-overlay">Photo 3 description</div>
-                    </div>
-
-                    <!-- PHOTO 4 -->
-                    <div class="photo-card">
-                        <img src="" alt="Photo 4">
-                        <div class="photo-overlay">Photo 4 description</div>
-                    </div>
-
-                    <!-- PHOTO 5 -->
-                    <div class="photo-card">
-                        <img src="" alt="Photo 5">
-                        <div class="photo-overlay">Photo 5 description</div>
-                    </div>
-
-                    <!-- PHOTO 6 -->
-                    <div class="photo-card">
-                        <img src="" alt="Photo 6">
-                        <div class="photo-overlay">Photo 6 description</div>
-                    </div>
-
-                    <!-- PHOTO 7 -->
-                    <div class="photo-card">
-                        <img src="" alt="Photo 7">
-                        <div class="photo-overlay">Photo 7 description</div>
-                    </div>
-
-                    <!-- PHOTO 8 -->
-                    <div class="photo-card">
-                        <img src="" alt="Photo 8">
-                        <div class="photo-overlay">Photo 8 description</div>
-                    </div>
-
-                    <!-- UPLOAD FROM COMPUTER -->
-                    <label class="upload-area" for="photo-upload">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z" />
-                        </svg>
-                        <p>Upload photo</p>
-                        <input type="file" id="photo-upload" accept="image/*" multiple>
-                    </label>
-
-                    <!-- ADD NEW PHOTO HERE -->
-
                 </div>
+
+
+                <!-- ADD NEW PHOTO HERE -->
+
+            </div>
             </div>
 
             <!-- ===== ABOUT US ===== -->
@@ -847,66 +921,47 @@
         //
         const TEAM_MEMBERS = [
             {
-                name: "Kamron",
-                role: "editor",
+                name: "Shohjahon",
+                role: "DIRECTOR",
                 avatar: null,
-                tasks: [
-                    "edited all long videos",
-                    "ruled all of editing procecces",
-                ]
+                shortDesc: "Led the overall vision and coordinated the project.",
+                longDesc: "Shohjahon served as the primary director for our group project, coordinating every major creative decision from start to finish. He possessed a remarkable ability to visualize the final outcome before we even began filming. By constantly communicating with the team and meticulously reviewing the footage, he ensured that our core message remained clear. His leadership kept everyone focused, motivated, and aligned with our primary objectives throughout the entire challenging production process."
+            },
+            {
+                name: "Kamron",
+                role: "EDITOR",
+                avatar: null,
+                shortDesc: "Edited and polished all of the video content.",
+                longDesc: "Kamron was responsible for the crucial post-production phase, taking hours of raw footage and transforming it into a cohesive narrative. He spent countless late nights adjusting color correction, perfecting the audio sync, and adding subtle visual effects that greatly enhanced the final video. His exceptional attention to detail and mastery of editing software brought our ideas to life, ensuring the pacing was engaging and every transition felt incredibly smooth and professional."
             },
             {
                 name: "Abduqodir",
-                role: "Role",
+                role: "WRITER",
                 avatar: null,
-                tasks: [
-                    "Shot video 3",
-                    "Took photos of the group",
-                ]
+                shortDesc: "Crafted the script and overall narrative structure.",
+                longDesc: "Abduqodir took charge of crafting the entire script, ensuring our dialogue was natural and our story flowed logically. He conducted extensive research to gather accurate information and structured the narrative to be both educational and highly entertaining. By carefully selecting the right words and maintaining a consistent tone, he provided a strong foundation for the actors and the director. His brilliant writing truly set the stage for the project’s overall success."
             },
             {
-                name: "Shohjahon",
-                role: "project manager",
+                name: "Suhrobjon",
+                role: "CODER",
                 avatar: null,
-                tasks: [
-                    "Shot video 3",
-                    "Took photos of the group",
-                ]
-            }, {
-                name: "Bunyod",
-                role: "presenter",
-                avatar: null,
-                tasks: [
-                    "Shot video 3",
-                    "Took photos of the group",
-                ]
-            }, {
-                name: "Member 2",
-                role: "Role",
-                avatar: null,
-                tasks: [
-                    "Shot video 3",
-                    "Took photos of the group",
-                ]
-            }, {
-                name: "Member 2",
-                role: "Role",
-                avatar: null,
-                tasks: [
-                    "Shot video 3",
-                    "Took photos of the group",
-                ]
+                shortDesc: "Developed the technical backend and interactive site structure.",
+                longDesc: "Suhrobjon handled the complex technical aspects of our project, writing the core code that brought our interactive elements to life. He meticulously built a responsive layout, ensuring that the website functioned flawlessly across various devices and screen sizes. Whenever we encountered a frustrating bug or a layout issue, he was quick to debug and optimize the performance. His dedication to clean, efficient code made the user experience incredibly intuitive and seamless."
             },
-            // Copy the block below and fill in new members:
-            // {
-            //     name: "Name",
-            //     role: "What they did",
-            //     avatar: "https://example.com/avatar.jpg",  // or null
-            //     tasks: [
-            //         "Task 1",
-            //         "Task 2",
-            //     ]
-            // },
+            {
+                name: "Sherzod",
+                role: "ACTOR",
+                avatar: null,
+                shortDesc: "Performed the lead roles dynamically on camera.",
+                longDesc: "Sherzod stepped in front of the camera to deliver compelling and highly believable performances for our main video segments. He spent a significant amount of time memorizing complex lines and rehearsing his delivery to ensure authenticity. Even during multiple takes under hot lighting, he maintained a high level of energy and a positive attitude. His expressive body language and clear voice projection significantly elevated the quality and the emotional impact of our work."
+            },
+            {
+                name: "Bunyod",
+                role: "DESIGNER",
+                avatar: null,
+                shortDesc: "Created the stunning visual assets and UI layout.",
+                longDesc: "Bunyod was the creative force behind the visual aesthetics of our project, designing beautiful graphics and a stunning user interface. He carefully selected color palettes, typography, and layout structures that perfectly matched the tone of our content. From crafting the initial wireframes to delivering the final polished assets, he ensured every visual element was appealing and highly accessible. His outstanding design work made our project look modern and highly professional."
+            }
         ];
 
         // Renders photo cards from array
@@ -943,8 +998,6 @@
                     ? `<div class="member-avatar"><img src="${member.avatar}" alt="${member.name}"></div>`
                     : `<div class="member-avatar">${initial}</div>`;
 
-                const tasksHTML = member.tasks.map(task => `<li>${task}</li>`).join('');
-
                 card.innerHTML = `
                     <div class="member-header">
                         ${avatarHTML}
@@ -953,9 +1006,8 @@
                             <div class="member-role">${member.role}</div>
                         </div>
                     </div>
-                    <ul class="member-tasks">
-                        ${tasksHTML}
-                    </ul>
+                    <div class="member-short">${member.shortDesc}</div>
+                    <div class="member-desc-full">${member.longDesc}</div>
                 `;
                 grid.appendChild(card);
             });
